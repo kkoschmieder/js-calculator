@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- math.js linking-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.1/math.js" integrity="sha512-qBGHnIjw1CTZC0Vpshjjb4StUqVHm8LqqE4cco3FdEu1lS+gpXv/HON5qNjNq5mVnIlZPABGqkGksRrV6NZx+A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Simple JS Calculator</title>
+</head>
+<body>
+    
+    <!--Calculator structure start-->
+    <div class="calculator">
+        <input type="text" class="calc-display" id="calculator-display">
+        <div class="calc-panel">
+            <!--Num buttons 0-9-->
+            <button class="num-button">7</button>
+            <button class="num-button">8</button>
+            <button class="num-button">9</button>
+            <button class="num-button">4</button>
+            <button class="num-button">5</button>
+            <button class="num-button">6</button>
+            <button class="num-button">1</button>
+            <button class="num-button">2</button>
+            <button class="num-button">3</button>
+            <button class="num-button">0</button>
+            <!--Operator buttons +, -, *, /-->
+            <button class="operator-button">+</button>
+            <button class="operator-button">-</button>
+            <button class="operator-button">*</button>
+            <button class="operator-button">/</button>
+
+            <!--Buttons: decimal, equal and clear-->
+            <button class="function-button equal">=</button>
+            <button class="function-button decimal">.</button>
+            <button class="function-button clear">C</button>
+        </div>
+    </div>
+    <!--Calculator structure end-->
+
+</body>
+</html>
