@@ -26,6 +26,9 @@ let calculator = {
             case 'C':
                 calculator.clear();
                 break;
+            case 'Del':
+                calculator.delete();
+                break;
             case '9':
             case '8':
             case '7':
@@ -46,18 +49,28 @@ let calculator = {
         }
 
     },
-
+    //--Calculator display update with value from button--//
     displayUpdate: function(btnValue) {
         this.display.value += btnValue;
     },
-
+    //--Calculator evaluate using math.js library method--//
     evaluate: function() {
         let result = math.evaluate(calculator.display.value);
         calculator.display.value = result;
     },
-
+    //--Calculator display clear--//
     clear: function() {
         calculator.display.value ='';
+    },
+    //--Remove last character of string from Calculator Display--//
+    delete: function() {
+        let previousValue = calculator.display.value;
+        let currentValue = 0;
+        if (previousValue < 0) {
+            currentValue = '';
+        }
+        else currentValue = previousValue.slice(0, -1);
+        calculator.display.value = currentValue;
     }
 
 };
