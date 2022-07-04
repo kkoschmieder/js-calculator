@@ -29,6 +29,9 @@ let calculator = {
             case 'Del':
                 calculator.delete();
                 break;
+            case '+/-':
+                calculator.signChange();
+                break;
             case '9':
             case '8':
             case '7':
@@ -71,6 +74,16 @@ let calculator = {
         }
         else currentValue = previousValue.slice(0, -1);
         calculator.display.value = currentValue;
+    },
+
+    signChange: function() {
+        let value = calculator.display.value;
+        if (value == '') calculator.display.value = value;
+
+        else {   
+            value = value*(-1);
+            calculator.display.value = value;
+        }
     }
 
 };
