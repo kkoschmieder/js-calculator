@@ -75,7 +75,7 @@ let calculator = {
         else currentValue = previousValue.slice(0, -1);
         calculator.display.value = currentValue;
     },
-
+    //--Changing sign of the value in calculator display, +/- --//
     signChange: function() {
         let value = calculator.display.value;
         if (value == '') calculator.display.value = value;
